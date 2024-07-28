@@ -1,0 +1,14 @@
+- 새 db 생성
+create database rcdb character set utf8;
+
+- 새 table 생성
+create table outbound (id int not null auto_increment, date date, x int, y int, primary key (id) ) default charset=utf8;
+
+- table의 column 수 확인
+select count(id) from outbound;
+
+- table의 전체 x, y값 받아오기
+select x, y from outbound;
+
+- 지정한 id의 column의 x, y 값 받아오기
+select x,y from outbound where id=[지정];
